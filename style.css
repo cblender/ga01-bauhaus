@@ -1,5 +1,94 @@
 h1 {
     font-family: reross-quadratic, sans-serif;
-    font-size: 70px;
-    color: #FF3900
+    font-size: 50px;
+    color: #FF3900;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: reross-quadratic, sans-serif;
+    font-size: 34px;
+    color: #414141;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/*
+Futura PT Demi 18 Black
+Futura PT Medium 16 Black
+Futura PT Medium 16 #9D9D9D
+Futura PT Medium 14 Black
+*/
+
+h3 {
+    font-family: futura-pt, sans-serif;
+    font-size: 14;
+    font-style: normal;
+    font-weight: 500;
+    color: black;
+}
+
+p {
+    font-family: futura-pt, sans-serif;
+    font-size: 18;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+
+}
+
+article {
+    width: 75%;
+}
+
+img {
+    width: 100%;
+}
+
+.top1 {
+    grid-area: top1;
+}
+
+.top2 {
+    grid-area: top2;
+}
+
+.top3 {
+    grid-area: top3;
+}
+
+.nav {
+    grid-area: nav;
+    width: 100%;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-areas: 
+    'top1 nav'
+    'top2 nav'
+    'top3 nav';
+    grid-template-columns: 1fr 250px;
+    grid-gap: 40px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header-grid > div {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+}
+
+#logo {
+    width: 80%;
+}
+
+#navback {
+    position: relative;
+    bottom: 420px;
+    float: right;
+    width: 85.5%;
+    height: 690px;
+    background-color: #dadada;
+    z-index: -1;
 }
