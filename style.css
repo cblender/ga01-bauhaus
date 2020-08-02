@@ -51,6 +51,10 @@ img {
 }
 
 nav {
+    /* display: grid;
+    grid-template-areas:
+    'logo'
+    'ham'; */
     grid-area: nav;
     width: 100%;
     height: 690px;
@@ -117,13 +121,14 @@ nav {
     bottom: 69px;
     width: 5vw;
     height: 5vw;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 #logo {
     position: relative;
-    width: 15vw;
+    width: 20vw;
+    right: 20px;
     z-index: 1;
 }
 
@@ -137,9 +142,60 @@ nav {
     /*bottom: 420px;*/
     bottom: 69%;
     float: right;
-    width: 86%;
+    left: 2vw;
+    width: 100%;
     height: 50vh;
     min-height: 666px;
     
     background-color: #e7e7e7;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        display: grid;
+        grid-template-areas: 'logo nav';
+        grid-template-columns: 20vw 1fr;
+    }
+
+    .header-grid {
+        grid-template-areas: 
+        'nav'
+        'top1'
+        'top2'
+        'top3';
+        grid-template-columns: 1fr
+    }
+
+    #ham {
+        position: relative;
+        bottom: 0px;
+        left: 35vw;
+        width: 10vw;
+        height: 10vw;
+        max-width: 100px;
+        max-height: 100px;
+        
+    }
+    
+    #logo {
+        grid-area: logo;
+        width: initial;
+        left: 5vw;
+        height: 50vh;
+        min-height: 250px;
+    }
+
+    #navback {
+        position: absolute;
+
+        grid-area: nav;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        top: 0%;
+        left: 0;
+        width: 100vw;
+        height: 50vh;
+        min-height: 265px;
+    }
 }
