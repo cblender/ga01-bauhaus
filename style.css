@@ -1,3 +1,12 @@
+                /*$$$$$$$                       /$$              
+               | $$_____/                      | $$              
+  /$$$         | $$       /$$$$$$  /$$$$$$$  /$$$$$$    /$$$$$$$
+ /$$_ $$  /$$  | $$$$$   /$$__  $$| $$__  $$|_  $$_/   /$$_____/
+| $$ \ $$| $$  | $$__/  | $$  \ $$| $$  \ $$  | $$    |  $$$$$$ 
+|__/  \  $$$/  | $$     | $$  | $$| $$  | $$  | $$ /$$ \____  $$
+       \___/   | $$     |  $$$$$$/| $$  | $$  |  $$$$/ /$$$$$$$/
+               |__/      \______/ |__/  |__/   \___/  |______*/ 
+
 h1 {
     font-family: reross-quadratic, sans-serif;
     font-size: 50px;
@@ -13,13 +22,6 @@ h2 {
     font-style: normal;
     font-weight: 400;
 }
-
-/*
-Futura PT Demi 18 Black
-Futura PT Medium 16 Black
-Futura PT Medium 16 #9D9D9D
-Futura PT Medium 14 Black
-*/
 
 h3 {
     font-family: futura-pt, sans-serif;
@@ -37,6 +39,20 @@ h4 {
     color: black;
 
 }
+
+
+
+  /*$$$$$  /$$                                     /$$              
+ /$$__  $$| $$                                    | $$              
+| $$  \ $$| $$$$$$$    /$$  /$$$$$$   /$$$$$$$ /$$$$$$    /$$$$$$$
+| $$  | $$| $$__  $$  |__/ /$$__  $$ /$$_____/|_  $$_/   /$$_____/
+| $$  | $$| $$  \ $$   /$$| $$$$$$$$| $$        | $$    |  $$$$$$ 
+| $$  | $$| $$  | $$  | $$| $$_____/| $$        | $$ /$$ \____  $$
+|  $$$$$$/| $$$$$$$/  | $$|  $$$$$$$|  $$$$$$$  |  $$$$/ /$$$$$$$/
+\______/ |_______/    | $$ \_______/ \_______/   \___/  |_______/ 
+                 /$$  | $$                                        
+                |  $$$$$$/                                        
+                 \_____*/ 
 
 article {
     grid-area: content;
@@ -67,36 +83,33 @@ img {
 }
 
 nav {
-    /* display: grid;
-    grid-template-areas:
-    'logo'
-    'ham'; */
     grid-area: nav;
     width: 100%;
     height: 690px;
 }
 
+
+
+            /*$$$$$  /$$                                                  
+           /$$__  $$| $$                                                  
+          | $$  \__/| $$  /$$$$$$   /$$$$$$$  /$$$$$$$  /$$$$$$   /$$$$$$$
+          | $$      | $$ |____  $$ /$$_____/ /$$_____/ /$$__  $$ /$$_____/
+          | $$      | $$  /$$$$$$$|  $$$$$$ |  $$$$$$ | $$$$$$$$|  $$$$$$ 
+ /$$$     | $$    $$| $$ /$$__  $$ \____  $$ \____  $$| $$_____/ \____  $$
+| $$$     |  $$$$$$/| $$|  $$$$$$$ /$$$$$$$/ /$$$$$$$/|  $$$$$$$ /$$$$$$$/
+|___/      \______/ |__/ \_______/|_______/ |_______/  \_______/|______*/ 
+
 .articleTop {
     grid-area: top;
+
     display: flex;
     flex-direction: column;
+    justify-content: left;
     align-items: center;
-    justify-content: space-around;
 
+    width: 69%;
     padding-left: 50px;
     padding-bottom: 100px;
-}
-
-.articleHead {
-    grid-area: header;
-}
-
-.articleSecondary {
-    display: grid;
-    grid-template-areas: 'img bar content';
-    grid-template-columns: 35vw 1fr;
-
-    padding-bottom: 50px;
 }
 
 .articleBody {
@@ -107,14 +120,42 @@ nav {
     grid-template-columns: 35vw 1fr;
 }
 
+.articleHead {
+    grid-area: header;
+}
+
 .articleImg {
+
+    /* GENERAL CONTAINER.  USE UNIQUE ID'S LOCATED IN "ARTICLE CONTENT" BELOW TO CARRY BACKGROUND IMAGES. */
+    
     grid-area: img;
     
     background-color: #9d9d9d;
-    background-image: url(https://images.unsplash.com/photo-1415889129442-70faf6ef3bcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1232&q=80);
-    background-position: center;
-    background-size: cover;
+}
 
+.articleReverse {
+    grid-area: body;
+
+    position: absolute;
+    display: grid;
+    grid-template-areas: 'content bar img';
+    grid-template-columns: 1fr 50px 35vw;
+
+    width: 80%;
+    right: 0px;
+}
+
+div.articleReverse > article {
+    align-items: right;
+    text-align: right;
+}
+
+.articleSecondary {
+    display: grid;
+    grid-template-areas: 'img bar content';
+    grid-template-columns: 35% 1fr;
+
+    padding-bottom: 50px;
 }
 
 .bar {
@@ -125,6 +166,17 @@ nav {
     width: 10px;
     height: 100%;
     border-radius: 7px;
+}
+
+.body-grid {
+    display: grid;
+    grid-template-areas: 
+    '. .'
+    '. .';
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px;
+    padding-top: 100px;
+
 }
 
 .button {
@@ -150,8 +202,6 @@ nav {
     display: grid;
     grid-template-areas: 
     'top nav'
-    'spacer nav'
-    'header nav'
     'header nav';
     grid-template-columns: 1fr 20vw;
     grid-gap: 40px;
@@ -166,12 +216,22 @@ nav {
 .spacer {
     grid-area: spacer;
 
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 69px;
+    padding-bottom: 69px;
 
     background-color: rgba(0, 0, 0, 0);
 }
 
+
+
+   /*$ /$$         /$$$$$$ /$$$$$$$  /$$          
+  / $$/ $$        |_  $$_/| $$__  $$| $/          
+ /$$$$$$$$$$        | $$  | $$  \ $$|_/  /$$$$$$$
+|__ $$  $$_/        | $$  | $$  | $$    /$$_____/
+ /$$$$$$$$$$        | $$  | $$  | $$   |  $$$$$$ 
+|_  $$  $$_/        | $$  | $$  | $$    \____  $$
+  | $$| $$         /$$$$$$| $$$$$$$/    /$$$$$$$/
+  |__/|__/        |______/|_______/    |______*/
 
 #articleType {
     color: #FF3900;
@@ -181,11 +241,6 @@ nav {
 #ham {
     position: relative;
     bottom: 50px;
-    /* width: 5vw;
-    height: 5vw;
-    max-width: 69px;
-    max-height: 69px; */
-
     width: 50px;
     height: 50px;
 }
@@ -196,10 +251,6 @@ nav {
     right: 20px;
     width: min(20vw, 250px);
     z-index: 1;
-}
-
-#logo:hover {
-    bottom: 30vh;
 }
 
 #navback {
@@ -219,7 +270,65 @@ nav {
     background-color: #e7e7e7;
 }
 
-@media screen and (max-width: 800px) {
+/*
+#navBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: left;
+    
+    position: relative;
+    left: 41%;
+    top: 50vh;
+    z-index: 2;
+}
+*/
+
+
+
+  /*$$$$$              /$$     /$$           /$$                    /$$$$$$                        /$$                           /$$    
+ /$$__  $$            | $$    |__/          | $$                   /$$__  $$                      | $$                          | $$    
+| $$  \ $$  /$$$$$$  /$$$$$$   /$$  /$$$$$$$| $$  /$$$$$$         | $$  \__/  /$$$$$$  /$$$$$$$  /$$$$$$    /$$$$$$  /$$$$$$$  /$$$$$$  
+| $$$$$$$$ /$$__  $$|_  $$_/  | $$ /$$_____/| $$ /$$__  $$        | $$       /$$__  $$| $$__  $$|_  $$_/   /$$__  $$| $$__  $$|_  $$_/  
+| $$__  $$| $$  \__/  | $$    | $$| $$      | $$| $$$$$$$$        | $$      | $$  \ $$| $$  \ $$  | $$    | $$$$$$$$| $$  \ $$  | $$    
+| $$  | $$| $$        | $$ /$$| $$| $$      | $$| $$_____/        | $$    $$| $$  | $$| $$  | $$  | $$ /$$| $$_____/| $$  | $$  | $$ /$$
+| $$  | $$| $$        |  $$$$/| $$|  $$$$$$$| $$|  $$$$$$$        |  $$$$$$/|  $$$$$$/| $$  | $$  |  $$$$/|  $$$$$$$| $$  | $$  |  $$$$/
+|__/  |__/|__/         \___/  |__/ \_______/|__/ \_______/         \______/  \______/ |__/  |__/   \___/   \_______/|__/  |__/   \___*/
+
+#timeToListen {
+    background-image: url(./img/article/old-man-portrait.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#goForIt {
+    background-image: url(./img/article/grayscale\ city.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+ /*$      /$$           /$$       /$$ /$$                   /$$$$$$$                       /$$                              
+| $$$    /$$$          | $$      |__/| $$                  | $$__  $$                     |__/                              
+| $$$$  /$$$$  /$$$$$$ | $$$$$$$  /$$| $$  /$$$$$$         | $$  \ $$  /$$$$$$  /$$    /$$ /$$  /$$$$$$$  /$$$$$$   /$$$$$$$
+| $$ $$/$$ $$ /$$__  $$| $$__  $$| $$| $$ /$$__  $$        | $$  | $$ /$$__  $$|  $$  /$$/| $$ /$$_____/ /$$__  $$ /$$_____/
+| $$  $$$| $$| $$  \ $$| $$  \ $$| $$| $$| $$$$$$$$        | $$  | $$| $$$$$$$$ \  $$/$$/ | $$| $$      | $$$$$$$$|  $$$$$$ 
+| $$\  $ | $$| $$  | $$| $$  | $$| $$| $$| $$_____/        | $$  | $$| $$_____/  \  $$$/  | $$| $$      | $$_____/ \____  $$
+| $$ \/  | $$|  $$$$$$/| $$$$$$$/| $$| $$|  $$$$$$$        | $$$$$$$/|  $$$$$$$   \  $/   | $$|  $$$$$$$|  $$$$$$$ /$$$$$$$/
+|__/     |__/ \______/ |_______/ |__/|__/ \_______/        |_______/  \_______/    \_/    |__/ \_______/ \_______/|______*/
+
+@media screen and (max-width: 1000px) {
     nav {
         display: grid;
         grid-template-areas: 'logo nav';
@@ -230,20 +339,24 @@ nav {
         grid-template-areas: 
         'nav'
         'top'
-        'header'
         'header';
         grid-template-columns: 100%;
         grid-template-rows: max(200px, 30vh) 1fr 1fr 1fr;
+    }
+
+    .spacer {
+        grid-area: spacer;
+    
+        padding-top: 0px;
+        padding-bottom: 0px;
+    
+        background-color: rgba(0, 0, 0, 0);
     }
 
     #ham {
         position: absolute;
         top: min(250px, 30vh);
         right: 75px;
-        /* width: 10vw;
-        height: 10vw;
-        max-width: 69px;
-        max-height: 69px; */
         height: 50px;
         width: 50px;
         
@@ -253,8 +366,8 @@ nav {
         grid-area: logo;
         width: initial;
         left: 5vw;
-        height: 50vh;
-        min-height: 200px;
+        height: 47%;
+        min-height: 100px;
         max-height: 400px;
     }
 
@@ -273,4 +386,15 @@ nav {
         max-height: 350px;
 
     }
-}
+    
+    #navBox {
+        justify-content: center;
+    }
+
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+
+        left: 50px;
+        top: 10px;
+    }

@@ -9,12 +9,26 @@
   <body>
     <header>
         
+        <!-- <div id="navBox">
+        <div id="navMenu">
+            <a href="#" class="button">Potato</a>
+            <a href="#" class="button">Tomato</a>
+            <a href="#" class="button">Banana</a>
+        </div>
+        </div> -->
+    
+        <script>
+            function popup() {
+                document.getEementById("navMenu").style.display = "inline";
+            }
+        </script>
+
         <div class="header-grid">
             <nav>
                 <img id="logo" src="img/my500-logo.png">
 
                 <div id="navback">  
-                    <button id="ham">
+                    <button onclick="popup()" id="ham">
                         <img src="img/icn-navigation.png" alt="Navigation"/>
                     </button>
                 </div>      
@@ -25,15 +39,14 @@
                     <h1>Bigger, faster, better, stronger</h1>
                     <h3> <span id="articleType">Read</span> | 420 words | June 2020</h3>
                     <h4> Times are changing fast and whilst some of us were simply born to this meteoric rise there are others who were not.  How do our grandparents feel about change?</h4>
-                    <a href="#" class="button">Read more</a>
+                    <a href="./article1.html" class="button">Read more</a>
                 </article>
             </div>
 
             <div class="articleHead">
                 <div class="articleSecondary">
                 
-                    <div class="articleImg">
-                    </div>
+                    <div class="articleImg" id="timeToListen"></div>
                     <svg class="bar">
                     </svg>
 
@@ -47,8 +60,7 @@
                 </div>
 
                 <div class="articleSecondary">
-                    <div class="articleImg">
-                    </div>
+                    <div class="articleImg" id="goForIt"></div>
                     <svg class="bar">
                     </svg>
 
@@ -63,8 +75,45 @@
 
         </div>
 
-    </header>  
+    </header>
+
+    <div class="body-grid">
+
+        <div class="articleReverse">
+            <div class="articleImg" id="goForIt"></div>
+        
+            <article>
+                <h2>Reversed Article Title</h2>
+                <h3><span id="articleType">Read</span> | 420 words | June 2020</h3>
+                <h4>This is a descriptive sub-headline that introduces the whole content of this text to the audience, which is (presumably) interested in reading about this topic.</h4>
+                <a href="#" class="button">Read more</a>
+            </article>            
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="articleBody">
+            <div class="articleImg" id="goForIt"></div>
+            <svg class="bar">
+            </svg>
+
+            <article>
+                <h2>Additional Article</h2>
+                <h3><span id="articleType">Read</span> | 420 words | June 2020</h3>
+                <h4>This is a descriptive sub-headline that introduces the whole content of this text to the audience, which is (presumably) interested in reading about this topic.</h4>
+                <a href="#" class="button">Read more</a>
+            </article>            
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION SCRIPT: -->    
+
+ 
 
     </body>
+
+
+
 </html>
 
